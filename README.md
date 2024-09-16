@@ -1,4 +1,4 @@
-商业化首页——星尘科技
+商业化首页——动力恒科技
 
 响应式企业官网，预览请点击：https://11509tiger.github.io/Enterprise-website/index.html
 
