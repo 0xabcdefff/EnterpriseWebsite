@@ -443,7 +443,7 @@ section {
   display: grid;
   /* 最大值不能超过220px 最小值自行调整 */
   grid-template-columns: repeat(4,minmax(auto,220px));
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   position: relative;
   z-index: 20;
@@ -568,7 +568,7 @@ footer {
   max-width: 1180px;
   display: grid;
   grid-template-columns: 2fr repeat(4,1fr);
-  padding: 0 80px;
+  padding: 0px 80px 20px 80px;
   position: relative;
 }
 
@@ -833,7 +833,6 @@ footer {
 
   .showcases .case-item {
     width: calc(100vw/2);
-    height: 30vw;
   }
 }
 
@@ -864,4 +863,75 @@ footer {
     justify-self: start;
     text-align: left;
   }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  white-space: nowrap;
+  padding: 10px 0;
+  margin-top: auto; /* 将 footer 推到页面底部 */
+  width: 100%;
+}
+
+.footer-info img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.icp-info, .security-info {
+  line-height: 20px; /* 与图标高度一致 */
+  display: inline-flex;
+  align-items: center;
+  margin: 0 5px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.security-info img {
+  margin-right: 5px;
+}
+
+.icp-info:hover, .security-info:hover {
+  text-decoration: underline;
+}
+
+/* 媒体查询：在小屏幕上调整布局 */
+@media (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.footer-info {
+  text-align: center;
+}
+
+.beian-info {
+  display: inline-flex;
+  align-items: center;
+  justify-self: center;
+}
+
+
+
+.icp-info {
+  margin-right: 25px;
+}
+
+.security-info img {
+  margin-right: 5px;
 }
