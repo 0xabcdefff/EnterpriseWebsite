@@ -124,4 +124,3 @@ const burgerEl = document.querySelector(".burger");
 burgerEl.addEventListener("click", () => {
   headerEl.classList.toggle("open");
 })
-
